@@ -1,0 +1,950 @@
+/*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    // background: #999999;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/*
+ * reset button styles.
+ */
+
+button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+ Author's custom styles
+========================================================================== */
+$primary-color: #15F1FF;
+$light-color: white;
+$dark-color: #111111;
+$secondary-color: #f06449;
+$display-font: 'Rubik', sans-serif;
+$text-font: 'Rubik', sans-serif;
+
+
+.primary {color: $light-color;}
+// main styles
+html {
+  font-family: $text-font;
+  font-size: 16px;
+  color: $dark-color;
+}
+body {
+  margin: 0;
+}
+main, header, .footer-contain {
+  width: 80vw;
+}
+main {
+  margin: 25px auto;
+  display: flow-root;
+}
+main img {
+  width: 100%;
+}
+article {
+  margin: 0 0 50px;
+}
+header {
+  margin: 25px auto 0;
+  padding: 0 0 40px;
+  display: flow-root;
+}
+header.h-home {
+  margin: 0 auto;
+  padding: 50px 10vw 40px;
+  display: flow-root;
+  background-color: $primary-color;
+}
+.interior {
+  margin: 50px auto 0;
+}
+.footer-contain {
+  margin: 0 auto;
+  display: flow-root;
+}
+footer {
+  background-color: $primary-color;
+  padding: 50px 0;
+}
+.footer-contain {
+  display: grid;
+}
+.archive {
+  display: grid;
+}
+.archive article {
+  position: relative;
+}
+.info {
+  position: absolute;
+  top: 50px;
+}
+//post styles
+.post-title-container {
+  background-color: $primary-color;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.post-title {
+  width: 80vw;
+  height: 40vw;
+  margin: 0 auto;
+  position: relative;
+}
+.post-title img {
+  z-index: 1;
+  width: 100%;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
+.post-title-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 80vw;
+  height: 40vw;
+  background: no-repeat center center;
+  background-size: contain;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
+.post-text {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}
+.post article {
+  margin: 0;
+}
+.presenter-container-even, .presenter-container-odd, .presenter-container-single {
+  display: grid;
+}
+.presenter-even, .presenter-odd {
+  margin: 12.5px;
+  flex-grow: 0;
+}
+.post .intro-material {
+  margin: 0 0 25px 0;
+}
+.intro-text p {
+  margin-bottom: 0;
+}
+.post .intro-material .intro-text {
+}
+.post .intro-material .intro-button {
+  margin: 25px 0 50px;
+}
+.intro-button button {
+  width: 100%;
+  text-align: center;
+}
+// nav styles
+nav {
+  width: 100%;
+  margin: 0;
+}
+nav ul {
+  display: flow-root;
+}
+nav li {
+  float: none;
+  margin: 10px 0;
+}
+nav .hamburger:hover {
+  cursor: pointer;
+}
+#menu-icon {
+  position: absolute;
+  top: 55px;
+  right: 10vw;
+  z-index: 200;
+  padding: 0;
+}
+.h-home .hamburger-inner, .h-home .hamburger-inner::before, .h-home .hamburger-inner::after {
+  background-color: $light-color;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: $primary-color;
+}
+.is-active .hamburger-inner, .is-active .hamburger-inner::before, .is-active .hamburger-inner::after{
+  background-color: $light-color;
+}
+nav #menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $primary-color;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  padding: 50px 10vw;
+}
+nav #menu ul {
+  padding: 0;
+  margin: 0;
+}
+nav #menu li {
+  font: 900 2em/1 $display-font;
+  margin: 15px 0;
+  list-style-type: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+nav #menu li a, nav #menu li a:active {
+  display: inline-block;
+  color: $dark-color;
+  text-decoration: none;
+  border-bottom: 5px solid $primary-color;
+  transition: .5s border-bottom ease;
+}
+nav #menu li a:hover {
+  border-bottom: 5px solid $dark-color;
+}
+nav .hide {
+  display: none;
+}
+.scroll-lock {
+  overflow: hidden !important;
+}
+
+
+//type styles
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+h1 {
+  // font: 900 10rem/1 $display-font;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h1.home {
+  font: 900 3rem/1 $display-font;
+  margin-right: 35px;
+}
+h1 span.asterisks {
+  color: $light-color;
+  position: relative;
+  font-weight: 700;
+  // top: -4rem;
+}
+h1 span.asterisks:hover {
+  cursor: pointer;
+}
+h2 {
+  // font: 900 10rem/1 $display-font;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+h2 span.date {
+  color: $primary-color;
+  position: relative;
+}
+.post-title h2 {
+  color: $light-color;
+  margin-bottom: 10px;
+}
+h3 {
+  font: 700 2rem/1 $display-font;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+h4 {
+  // font: 700 1.5rem/1 $display-font;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+h6 {
+  font: 700 1rem/1 $display-font;
+  margin: 0 0 5px;
+}
+.post-title h6 {
+  color: $light-color;
+}
+#asterisk-hover span {
+  font-weight: 700;
+}
+p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+p img {
+  margin-bottom: 15px;
+}
+.big-number p {
+  font: 900 10rem/1 $display-font;
+  color: $primary-color;
+  margin: 0;
+}
+//button styles
+button {
+  border: 5px solid $primary-color;
+  border-radius: 5px;
+  font: 700 1rem/1 $text-font;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 10px 18px;
+  transition: .5s background-color ease;
+}
+button:hover {
+  background-color: $primary-color;
+}
+button#menu-icon {
+  border: none;
+}
+button#menu-icon:hover {
+  background-color: rgba(0,0,0,0);
+}
+.fom-button {
+  margin-right: 25px;
+}
+.cs-button, .cs-button:hover {
+  border: 5px solid $primary-color;
+  border-radius: 5px;
+  font: 700 1rem/1 $text-font;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 10px 18px;
+  background-color: $primary-color;
+  color: $dark-color;
+  cursor: default;
+}
+.full-button, .full-button:hover {
+  border: 5px solid $secondary-color;
+  border-radius: 5px;
+  font: 700 1rem/1 $text-font;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 10px 18px;
+  background-color: $light-color;
+  color: $dark-color;
+  cursor: default;
+}
+
+//link styles
+a, a:link, a:visited {
+  color: $dark-color;
+  text-decoration: underline;
+}
+.int a, .int a:link, .int a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-shadow: $secondary-color 2px 2px 2px;
+}
+.post article a, .post article a:link, .post article a:visited {
+  color: $dark-color;
+  text-decoration: none;
+  border-bottom: 2px solid $primary-color;
+}
+.post article a:hover {
+  color: $primary-color;
+  border-bottom: 2px solid $primary-color;
+}
+a.prev {
+  float: left;
+  text-decoration: none;
+}
+a.next {
+  float: right;
+  text-decoration: none;
+}
+
+// form
+.f-email {
+  width: 100%;
+}
+.f-email form {
+  margin: 10px 0 0   0;
+}
+.f-field, .mc-status {
+  margin: 15px 0 0 0;
+}
+.f-field input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid $dark-color;
+  font: normal 1rem/1 $text-font;
+  padding: 0;
+  border-radius: 0;
+}
+.f-field input:focus {
+  outline: none;
+}
+.f-field label {
+  font: 700 1rem/1 $text-font;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.f-email input.button {
+  border: 5px solid $dark-color;
+  border-radius: 5px;
+  font: 700 1rem/1 $text-font;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 10px 18px;
+  margin: 25px 0 0 0;
+  transition: .5s background-color ease, .5s color ease;
+  background-color: transparent;
+
+}
+.f-email input.button:hover {
+  background-color: $dark-color;
+  color: $light-color;
+  cursor: pointer;
+}
+.f-email input.button:focus {
+  outline: none;
+}
+.label-normal {
+  font-weight: normal;
+}
+.pattern {
+  color: #808080;
+  font-size: 0.8em;
+  font-weight: normal;
+}
+.supports-color .color,
+.supports-date .date,
+.supports-time .time,
+.supports-month .mont {
+  display: none;
+}
+
+/**
+ * Errors
+ */
+.f-field .error {
+  border-color: $secondary-color;
+}
+
+.error-message {
+  background-color: $secondary-color;
+  padding: 5px 9px;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.success-message {
+  background-color: $light-color;
+  padding: 5px 9px;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+
+// details
+.line-through {
+  border-bottom: 5px solid $primary-color;
+  position: relative;
+  width: 100%;
+  height: 10px;
+  margin: 0 0 50px;
+}
+.line-through h4 span {
+  position: relative;
+  top: 0px;
+  left: 25px;
+  padding: 0 10px;
+  background-color: $light-color;
+}
+.recent {
+  margin-top: 100px;
+}
+.spin {
+  display: inline-block;
+  transform-origin: 18px 24px;
+}
+.interior {
+  display: flow-root;
+}
+.interior h4 {
+  margin-top: 12px;
+  float: left;
+}
+.head-line {
+  border-bottom: 5px solid $primary-color;
+  width: 40%;
+  margin: 15px 0 5px;
+}
+::selection {
+    background: $secondary-color;
+    text-shadow: none;
+}
+
+//animations {
+@keyframes spinner {
+  0%   {transform: rotate(0);}
+  80%  {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
+}
+
+
+ /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+  display: none !important;
+}
+.desktop-only {
+  display: none;
+}
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 400px) {
+  h1.home {
+    font: 900 4rem/1 $display-font;
+  }
+  #menu-icon {
+    top: 61px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .footer-contain {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "email about";
+    grid-gap: 50px;
+  }
+  .f-email {
+    grid-area: email;
+  }
+  .f-about {
+    grid-area: about;
+  }
+  .archive {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px 50px;
+  }
+  .line-through h4 span {
+    left: 100px;
+    padding: 0 25px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  //main styles
+  main, header, .footer-contain {
+    width: 80vw;
+  }
+  main {
+    margin: 50px auto;
+  }
+  .contain {
+    width: 100%;
+  }
+  main .contain {
+    width: 75%;
+  }
+  .interior .contain {
+    width: 90vw;
+  }
+  header.h-home {
+    background-color: $light-color;
+  }
+  .h-home .hamburger-inner, .h-home .hamburger-inner::before, .h-home .hamburger-inner::after {
+    background-color: $primary-color;
+  }
+  h1 span.asterisks {
+    color: $primary-color;
+  }
+  .footer-contain {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "email blank about";
+    grid-gap: 25px;
+  }
+  .post-title {
+    height: 400px;
+  }
+  .post-title-img {
+    width: 800px;
+    height: 400px;
+    background: no-repeat center right;
+    background-size: contain;
+  }
+  .presenter-container-even, .presenter-container-odd, .presenter-container-single article {
+    grid-gap: 25px;
+    display: grid;
+  }
+  .presenter-container-even {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .presenter-container-odd {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .presenter-container-single article {
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 0;
+  }
+  .presenter-container-single article p:first-of-type {
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+  .presenter-container-single article h4, .presenter-container-single article p {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .presenter-even, .presenter-odd {
+    margin: 12.5px;
+    flex-grow: 0;
+  }
+  .post .intro-material {
+    grid-area: 1 / 1 / 2 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0 25px;
+    grid-template-areas:
+      "text text text text empty button";
+    margin: 0 0 25px 0;
+  }
+  .post .intro-material .intro-text {
+    grid-area: text;
+  }
+  .post .intro-material .intro-button {
+    grid-area: button;
+    align-self: end;
+  }
+  // header styles
+  .interior #menu-icon {
+    top: 60px;
+  }
+  nav #menu li {
+    font: 900 4em/1 $display-font;
+  }
+  // type styles
+  h1.home {
+    font: 900 10rem/1 $display-font;
+    margin-top: -12px;
+  }
+  .interior h1 {
+    float: left;
+  }
+  h1 span.asterisks {
+    font-size: 5rem;
+    top: -4rem;
+  }
+  h2 {
+    font: 900 4rem/1 $display-font;
+  }
+  h2 span.date {
+    font-size: 1rem;
+    top: -2rem;
+  }
+  h4 {
+    font: 700 1.5rem/1 $display-font;
+  }
+  .post-title h6 {
+    color: $dark-color;
+  }
+  //details
+  #asterisk-hover {
+    position: absolute;
+    top: 250px;
+    left: calc(10vw + 577px);
+  }
+  .about {
+    width: calc(30vw - 25px);
+  }
+  .about-hide {
+    display: none;
+  }
+  .head-line {
+    position: relative;
+    width: 10%;
+    height: 20px;
+    float: left;
+    margin: 0 25px;
+  }
+  .spin {
+    animation: 5s infinite spinner;
+  }
+  // helper classes
+  .desktop-only {
+    display: inline-block;
+  }
+  .primary {
+    color: $primary-color;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .archive {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  //main styles
+  main, header, .footer-contain, .contain, main .contain, .post-title {
+    width: 1000px;
+  }
+  .interior .contain {
+    width: 1200px;
+  }
+  //header styles
+  #menu-icon {
+    right: calc((100vw - 1000px) / 2);
+  }
+}
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+   @media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+
+    article a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

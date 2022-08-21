@@ -1,0 +1,18 @@
+<div class="line-through recent">
+  <h4><span>Recent Events</span></h4>
+</div>
+{% assign curDate = site.time | date: '%s' %}
+{% assign counter = '0' %}
+{% for post in site.posts %}
+  {% assign postStartDate = post.date | date: '%s' %}
+  {% if postStartDate <= curDate %}
+    {% if counter < '3' %}
+      {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+      <article>
+        <h2>#{{ post.number }} &ndash; {{ post.title }}&nbsp;<span class="date">{{ post.date | date: "%m.%d.%Y"}}</h2>
+        <p>{{ post.description }}</p>
+        <a href="{{ post.url | relative_url }}"><button class="fom-button">Find Out More</button></a>
+      </article>
+    {% endif %}
+  {% endif %}
+{% endfor %}
