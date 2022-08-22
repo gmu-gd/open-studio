@@ -391,9 +391,20 @@ h4 .areas {
   letter-spacing: 1px;
   margin: 5px 0;
 }
+header h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.line-through h4 {
+  font: 700 1rem/.9 $display-font;
+  text-transform: uppercase;
+}
 h6 {
   font: 700 1rem/1 $display-font;
   margin: 0 0 5px;
+}
+.info h6 {
+  color: $primary-color;
 }
 .post-title h6 {
   color: $light-color;
@@ -415,7 +426,7 @@ p.intro {
 }
 .big-number p {
   font: 900 10rem/1 $display-font;
-  color: $primary-color;
+  color: $light-color;
   margin: 0;
 }
 .highlight {
@@ -516,10 +527,13 @@ a.next {
 }
 .line-through h4 span {
   position: relative;
-  top: 0px;
+  top: 0;
   left: 25px;
   padding: 0 10px;
   background-color: $dark-color;
+}
+.contain .line-through h4 span {
+  top: 5px;
 }
 .recent {
   margin-top: 100px;
@@ -713,7 +727,7 @@ footer ul li, .presenter-container-single article ul li {
 
   }
   .h-home .hamburger-inner, .h-home .hamburger-inner::before, .h-home .hamburger-inner::after {
-    background-color: $primary-color;
+    background-color: $light-color;
   }
   h1 span.asterisks {
     color: $primary-color;
@@ -844,6 +858,9 @@ footer ul li, .presenter-container-single article ul li {
   .archive {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
+  }
+  .archive div.line-through {
+    grid-column: span 3;
   }
 }
 @media only screen and (min-width: 1500px) {

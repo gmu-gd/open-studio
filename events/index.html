@@ -1,0 +1,51 @@
+---
+title: Events
+layout: interior
+---
+<main class="archive">
+  {% assign curDate = site.time | date: '%s' %}
+  <div class="line-through future">
+    <h4><span>Upcoming Events</span></h4>
+  </div>
+  {% if site.categories.future == null %}
+    <p>No upcoming events.</p>
+  {% else %}
+    {% for post in site.categories.future %}
+    {% assign postStartDate = post.date | date: '%s' %}
+      {% if postStartDate >= curDate %}
+        <article>
+          <div class="big-number">
+            <p>#{{ post.number }}</p>
+          </div>
+          <div class="info">
+            <h6>{{ post.date | date: "%m.%d.%Y"}}</h6>
+            <!-- <h3><a href="{{ post.url }}">{{ post.title }}</a></h3> -->
+            <h3><a href="{{post.url | relative_url}}">{{ post.title }}</a></h3>
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if site.categories.future == null %}
+
+  {% else %}
+    {% for post in site.categories.open %}
+      {% assign postStartDate = post.date | date: '%s' %}
+      {% if postStartDate < curDate %}
+      <div class="line-through recent">
+        <h4><span>Past Events</span></h4>
+      </div>
+        <article>
+          <div class="big-number">
+            <p>#{{ post.number }}</p>
+          </div>
+          <div class="info">
+            <h6>{{ post.date | date: "%m.%d.%Y"}}</h6>
+            <!-- <h3><a href="{{ post.url }}">{{ post.title }}</a></h3> -->
+            <h3><a href="{{post.url | relative_url}}">{{ post.title }}</a></h3>
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</main>
