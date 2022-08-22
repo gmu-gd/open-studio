@@ -378,8 +378,8 @@ h3 {
   color: $secondary-color;
 }
 h4 {
-  font: 700 1rem/1.5 $display-font;
-  text-transform: uppercase;
+  font: 400 1.5rem/1 $display-font;
+  text-transform: none;
   letter-spacing: 1px;
   margin: 5px 0;
 }
@@ -805,9 +805,6 @@ footer ul li, .presenter-container-single article ul li {
   h2 span.date {
     font-size: 1rem;
     top: -2rem;
-  }
-  h4 {
-    font: 700 1.5rem/1 $display-font;
   }
   .post-title h6 {
     color: $dark-color;
