@@ -341,7 +341,7 @@ h1 span.asterisks:hover {
 h2 {
   font-family: $display-font;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -378,7 +378,7 @@ h3 {
   color: $secondary-color;
 }
 h4 {
-  font: 700 1.5rem/1 $display-font;
+  font: 700 1rem/1.5 $display-font;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 5px 0;
@@ -655,6 +655,9 @@ footer ul li, .presenter-container-single article ul li {
 @media only screen and (min-width: 400px) {
   h1.home {
     font: 900 4rem/1 $display-font;
+  }
+  h2 {
+
   }
   #menu-icon {
     top: 61px;
