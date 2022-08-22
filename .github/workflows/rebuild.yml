@@ -3,7 +3,7 @@ name: 3am Rebuild
 
 on:
   schedule:
-    - cron:  '0 3 * * *' # Runs every day at 3am
+    - cron:  '0 * * * *' # Runs every hour
 
 jobs:
   refresh:
