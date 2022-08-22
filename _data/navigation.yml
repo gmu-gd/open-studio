@@ -2,7 +2,7 @@
   link: /
 - name: About
   link: /about
-- name: Archive
-  link: /archive
-- name: Register
-  link: /register
+# - name: Archive
+#  link: /archive
+# - name: Resources
+#  link: /resources

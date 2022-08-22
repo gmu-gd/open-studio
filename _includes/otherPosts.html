@@ -1,8 +1,0 @@
-<div class="PageNavigation">
-  {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url | relative_url}}"><i class="fas fa-long-arrow-alt-left"></i>&ensp;#{{page.previous.number}} <span class="desktop-only"> &mdash; {{page.previous.title}}</span></a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next" href="{{page.next.url | relative_url}}">#{{page.next.number}}<span class="desktop-only">&nbsp;&mdash; {{page.next.title}}</span>&ensp;<i class="fas fa-long-arrow-alt-right"></i></a>
-  {% endif %}
-</div>

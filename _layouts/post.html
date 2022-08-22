@@ -6,13 +6,6 @@
     <section class="post-title-container">
       <div class="post-title">
         <div class="post-text">
-          <h6>
-            {{ page.date | date: "%m.%d.%Y"}}
-            {% assign author = site.authors | where: 'short_name', page.author | first %}
-            {% if author %}
-              - <a href="{{ author.url }}">{{ author.name }}</a>
-            {% endif %}
-          </h6>
           <h2>#{{page.number}} &mdash; {{ page.title }}</h2>
         </div>
         <div class="post-title-img" style="background-image: url('/assets/img/{{ page.image }}')">
@@ -22,7 +15,6 @@
     </section>
     <main class="post">
       {{ content }}
-      {% include otherPosts.html %}
     </main>
     {% include footer.html %}
     {% include scripts.html %}

@@ -109,20 +109,23 @@ button:hover {
 /* ==========================================================================
  Author's custom styles
 ========================================================================== */
-$primary-color: #15F1FF;
-$light-color: white;
-$dark-color: #111111;
-$secondary-color: #f06449;
+$primary-color: #228CD3;
+$light-color: #FDFFF7;
+$dark-color: #242423;
+$secondary-color: #FFED65;
+$open-color: #59FFA0;
+$closed-color: tomato;
 $display-font: 'Rubik', sans-serif;
-$text-font: 'Rubik', sans-serif;
+$text-font: 'DM Sans', sans-serif;
 
 
-.primary {color: $light-color;}
+.primary {color: $primary-color;}
 // main styles
 html {
   font-family: $text-font;
-  font-size: 16px;
-  color: $dark-color;
+  font-size: 18px;
+  color: $primary-color;
+  background-color: $dark-color;
 }
 body {
   margin: 0;
@@ -131,14 +134,14 @@ main, header, .footer-contain {
   width: 80vw;
 }
 main {
-  margin: 25px auto;
+  margin: 0 auto 25px;
   display: flow-root;
 }
 main img {
   width: 100%;
 }
 article {
-  margin: 0 0 50px;
+  margin: 0 0 25px;
 }
 header {
   margin: 25px auto 0;
@@ -147,9 +150,9 @@ header {
 }
 header.h-home {
   margin: 0 auto;
-  padding: 50px 10vw 40px;
+  padding: 50px 10vw 0;
   display: flow-root;
-  background-color: $primary-color;
+  background-color: $dark-color;
 }
 .interior {
   margin: 50px auto 0;
@@ -161,6 +164,7 @@ header.h-home {
 footer {
   background-color: $primary-color;
   padding: 50px 0;
+  color: $dark-color;
 }
 .footer-contain {
   display: grid;
@@ -175,7 +179,13 @@ footer {
   position: absolute;
   top: 50px;
 }
+article {
+  color: $light-color;
+}
 //post styles
+.post {
+  color: $light-color;
+}
 .post-title-container {
   background-color: $primary-color;
   padding-top: 50px;
@@ -227,6 +237,7 @@ footer {
   margin-bottom: 0;
 }
 .post .intro-material .intro-text {
+
 }
 .post .intro-material .intro-button {
   margin: 25px 0 50px;
@@ -261,7 +272,7 @@ nav .hamburger:hover {
   background-color: $light-color;
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  background-color: $primary-color;
+  background-color: $light-color;
 }
 .is-active .hamburger-inner, .is-active .hamburger-inner::before, .is-active .hamburger-inner::after{
   background-color: $light-color;
@@ -270,7 +281,7 @@ nav #menu {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $primary-color;
+  background-color: $dark-color;
   width: 100vw;
   height: 100vh;
   z-index: 100;
@@ -289,13 +300,13 @@ nav #menu li {
 }
 nav #menu li a, nav #menu li a:active {
   display: inline-block;
-  color: $dark-color;
+  color: $light-color;
   text-decoration: none;
   border-bottom: 5px solid $primary-color;
   transition: .5s border-bottom ease;
 }
 nav #menu li a:hover {
-  border-bottom: 5px solid $dark-color;
+  border-bottom: 5px solid $light-color;
 }
 nav .hide {
   display: none;
@@ -310,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 h1 {
-  // font: 900 10rem/1 $display-font;
+  font-family: $display-font;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -328,7 +339,10 @@ h1 span.asterisks:hover {
   cursor: pointer;
 }
 h2 {
-  // font: 900 10rem/1 $display-font;
+  font-family: $display-font;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 25px;
@@ -336,6 +350,7 @@ h2 {
 h2 span.date {
   color: $primary-color;
   position: relative;
+  font-size: 1rem;
 }
 .post-title h2 {
   color: $light-color;
@@ -345,11 +360,36 @@ h3 {
   font: 700 2rem/1 $display-font;
   text-transform: uppercase;
   letter-spacing: .5px;
+  margin: 50px 0 15px 0
+}
+.contain article h3 {
+  margin: 0 0 15px;
+}
+.post .intro-material h3:first-of-type {
+  margin-top: 50px;
+}
+.closed {
+  color: $closed-color;
+}
+.open {
+  color: $open-color;
+}
+.post h3 {
+  color: $secondary-color;
 }
 h4 {
-  // font: 700 1.5rem/1 $display-font;
+  font: 700 1.5rem/1 $display-font;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+h4 .areas {
+  font-size: .7rem;
+  color: $secondary-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 5px 0;
 }
 h6 {
   font: 700 1rem/1 $display-font;
@@ -358,20 +398,29 @@ h6 {
 .post-title h6 {
   color: $light-color;
 }
-#asterisk-hover span {
-  font-weight: 700;
-}
 p {
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 p img {
   margin-bottom: 15px;
+}
+p.intro {
+  color: $light-color;
+  font-size: 1.4rem;
+  padding: 50px 0;
+}
+.presenter-container-single article p.intro {
+  padding-bottom: 0;
 }
 .big-number p {
   font: 900 10rem/1 $display-font;
   color: $primary-color;
   margin: 0;
+}
+.highlight {
+  // border-bottom: 2px solid $secondary-color;
+  color: $secondary-color;
 }
 //button styles
 button {
@@ -394,6 +443,12 @@ button#menu-icon:hover {
 }
 .fom-button {
   margin-right: 25px;
+  color: $primary-color;
+  transition: .5s border-color ease;
+}
+.fom-button:hover {
+  border-color: $light-color;
+  background-color: $dark-color;
 }
 .cs-button, .cs-button:hover {
   border: 5px solid $primary-color;
@@ -420,7 +475,7 @@ button#menu-icon:hover {
 
 //link styles
 a, a:link, a:visited {
-  color: $dark-color;
+  color: $primary-color;
   text-decoration: underline;
 }
 .int a, .int a:link, .int a:visited {
@@ -450,104 +505,21 @@ a.next {
   text-decoration: none;
 }
 
-// form
-.f-email {
-  width: 100%;
-}
-.f-email form {
-  margin: 10px 0 0   0;
-}
-.f-field, .mc-status {
-  margin: 15px 0 0 0;
-}
-.f-field input {
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  border-bottom: 3px solid $dark-color;
-  font: normal 1rem/1 $text-font;
-  padding: 0;
-  border-radius: 0;
-}
-.f-field input:focus {
-  outline: none;
-}
-.f-field label {
-  font: 700 1rem/1 $text-font;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-}
-.f-email input.button {
-  border: 5px solid $dark-color;
-  border-radius: 5px;
-  font: 700 1rem/1 $text-font;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  padding: 10px 18px;
-  margin: 25px 0 0 0;
-  transition: .5s background-color ease, .5s color ease;
-  background-color: transparent;
-
-}
-.f-email input.button:hover {
-  background-color: $dark-color;
-  color: $light-color;
-  cursor: pointer;
-}
-.f-email input.button:focus {
-  outline: none;
-}
-.label-normal {
-  font-weight: normal;
-}
-.pattern {
-  color: #808080;
-  font-size: 0.8em;
-  font-weight: normal;
-}
-.supports-color .color,
-.supports-date .date,
-.supports-time .time,
-.supports-month .mont {
-  display: none;
-}
-
-/**
- * Errors
- */
-.f-field .error {
-  border-color: $secondary-color;
-}
-
-.error-message {
-  background-color: $secondary-color;
-  padding: 5px 9px;
-  font-style: italic;
-  margin-top: 15px;
-}
-
-.success-message {
-  background-color: $light-color;
-  padding: 5px 9px;
-  font-style: italic;
-  margin-top: 15px;
-}
-
-
 // details
-.line-through {
+.line-through, hr {
+  border: none;
   border-bottom: 5px solid $primary-color;
   position: relative;
   width: 100%;
   height: 10px;
-  margin: 0 0 50px;
+  margin: 25px 0;
 }
 .line-through h4 span {
   position: relative;
   top: 0px;
   left: 25px;
   padding: 0 10px;
-  background-color: $light-color;
+  background-color: $dark-color;
 }
 .recent {
   margin-top: 100px;
@@ -571,6 +543,15 @@ a.next {
 ::selection {
     background: $secondary-color;
     text-shadow: none;
+}
+//list styles
+footer ul, .presenter-container-single article ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer ul li, .presenter-container-single article ul li {
+  margin: 3px 0 2px;
 }
 
 //animations {
@@ -678,6 +659,9 @@ a.next {
   #menu-icon {
     top: 61px;
   }
+  html {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 700px) {
@@ -703,24 +687,27 @@ a.next {
   }
 }
 @media only screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
   //main styles
   main, header, .footer-contain {
     width: 80vw;
   }
   main {
-    margin: 50px auto;
+    margin: 0 auto 50px;
   }
   .contain {
     width: 100%;
   }
   main .contain {
-    width: 75%;
+    width: 100%;
   }
   .interior .contain {
     width: 90vw;
   }
   header.h-home {
-    background-color: $light-color;
+
   }
   .h-home .hamburger-inner, .h-home .hamburger-inner::before, .h-home .hamburger-inner::after {
     background-color: $primary-color;
@@ -743,9 +730,11 @@ a.next {
     background: no-repeat center right;
     background-size: contain;
   }
-  .presenter-container-even, .presenter-container-odd, .presenter-container-single article {
+  .presenter-container-even, .presenter-container-odd, .presenter-container-single {
     grid-gap: 25px;
     display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 0;
   }
   .presenter-container-even {
     grid-template-columns: repeat(2, 1fr);
@@ -753,15 +742,18 @@ a.next {
   .presenter-container-odd {
     grid-template-columns: repeat(3, 1fr);
   }
-  .presenter-container-single article {
-    grid-template-columns: repeat(6, 1fr);
-    grid-row-gap: 0;
+  .presenter-container-single article:first-of-type, .presenter-container-single article:last-of-type {
+    grid-column-start: 1;
+    grid-column-end: 6;
   }
-  .presenter-container-single article p:first-of-type {
+  .presenter-container-single article {
+    grid-column: span 2;
+  }
+  .presenter-container-single img {
     grid-column-start: 1;
     grid-column-end: 7;
   }
-  .presenter-container-single article h4, .presenter-container-single article p {
+  .presenter-container-single article h3, .presenter-container-single article h4, .presenter-container-single article p, .presenter-container-single article ul {
     grid-column-start: 1;
     grid-column-end: 5;
   }
@@ -817,6 +809,7 @@ a.next {
   .post-title h6 {
     color: $dark-color;
   }
+
   //details
   #asterisk-hover {
     position: absolute;
