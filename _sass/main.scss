@@ -698,6 +698,9 @@ footer ul li, .presenter-container-single article ul li {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 25px 50px;
   }
+  .archive div.line-through {
+    grid-column: span 2;
+  }
   .line-through h4 span {
     left: 100px;
     padding: 0 25px;
