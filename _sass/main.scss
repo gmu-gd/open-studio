@@ -741,12 +741,6 @@ footer ul li, .presenter-container-single article ul li {
   h1 span.asterisks {
     color: $primary-color;
   }
-  .footer-contain {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "email blank about";
-    grid-gap: 25px;
-  }
   .post-title {
     height: 400px;
   }
