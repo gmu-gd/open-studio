@@ -399,6 +399,9 @@ header h4 {
   font: 700 1rem/.9 $display-font;
   text-transform: uppercase;
 }
+h5 {
+  margin: 5px 0;
+}
 h6 {
   font: 700 1rem/1 $display-font;
   margin: 0 0 5px;
@@ -589,6 +592,9 @@ footer ul li, .presenter-container-single article ul li {
 }
 .desktop-only {
   display: none;
+}
+.secondary {
+  color: $secondary-color;
 }
 /*
 * Hide only visually, but have it available for screen readers:

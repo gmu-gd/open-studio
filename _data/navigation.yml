@@ -4,5 +4,5 @@
   link: /about
 # - name: Events
 #  link: /events
-# - name: Resources
-#  link: /resources
+- name: People
+  link: /people

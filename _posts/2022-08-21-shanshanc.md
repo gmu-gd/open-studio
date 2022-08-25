@@ -1,9 +1,9 @@
 ---
-title: Pierre Bowins
+title: Shanshan Cui
 category: who
 bio: short bio goes here.
 areas: Area 1, area 2, area 3
 image: 8-drake_02.gif
-times: Wednesday 10am&ndash;12pm
+times: Monday 2&ndash;4pm
 layout: post
 ---
