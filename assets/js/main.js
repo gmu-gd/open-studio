@@ -15,11 +15,13 @@ var i = 1;
 function nav() {
   $('#menu-icon').click(function(){
     if (i == 1) {
+      $('nav').addClass('nav-open');
       $('#menu').removeClass('hide');
       $('.hamburger').addClass('is-active');
       $('body').addClass('scroll-lock');
       i++;
     } else {
+      $('nav').removeClass('nav-open');
       $('#menu').addClass('hide');
       $('body').removeClass('scroll-lock');
       $('.hamburger').removeClass('is-active');

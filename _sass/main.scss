@@ -130,7 +130,7 @@ html {
 body {
   margin: 0;
 }
-main, header, .footer-contain {
+main, header, .footer-contain, nav #menu {
   width: 80vw;
 }
 main {
@@ -145,17 +145,18 @@ article {
 }
 header {
   margin: 25px auto 0;
-  padding: 0 0 40px;
+  // padding: 0 0 40px;
   display: flow-root;
 }
 header.h-home {
-  margin: 0 auto;
-  padding: 50px 10vw 0;
+  margin: 50px auto 0;
+  // padding: 50px 10vw 0;
   display: flow-root;
   background-color: $dark-color;
+  position: relative;
 }
 .interior {
-  margin: 50px auto 0;
+  margin: 50px auto 25px;
 }
 .footer-contain {
   margin: 0 auto;
@@ -263,8 +264,8 @@ nav .hamburger:hover {
 }
 #menu-icon {
   position: absolute;
-  top: 55px;
-  right: 10vw;
+  top: 8px;
+  right: 0;
   z-index: 200;
   padding: 0;
 }
@@ -277,7 +278,7 @@ nav .hamburger:hover {
 .is-active .hamburger-inner, .is-active .hamburger-inner::before, .is-active .hamburger-inner::after{
   background-color: $light-color;
 }
-nav #menu {
+nav.nav-open {
   position: fixed;
   top: 0;
   left: 0;
@@ -285,7 +286,10 @@ nav #menu {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  padding: 50px 10vw;
+}
+nav #menu {
+  margin: 50px auto 0;
+  // padding: 50px 10vw;
 }
 nav #menu ul {
   padding: 0;
@@ -547,6 +551,7 @@ a.next {
 }
 .interior {
   display: flow-root;
+  position: relative;
 }
 .interior h4 {
   margin-top: 12px;
@@ -680,7 +685,7 @@ footer ul li, .presenter-container-single article ul li {
 
   }
   #menu-icon {
-    top: 61px;
+    // top: 61px;
   }
   html {
     font-size: 16px;
@@ -717,7 +722,7 @@ footer ul li, .presenter-container-single article ul li {
     font-size: 18px;
   }
   //main styles
-  main, header, .footer-contain {
+  main, header, .footer-contain, nav #menu {
     width: 80vw;
   }
   main {
@@ -799,7 +804,7 @@ footer ul li, .presenter-container-single article ul li {
   }
   // header styles
   .interior #menu-icon {
-    top: 60px;
+    top: 15px;
   }
   nav #menu li {
     font: 900 4em/1 $display-font;
@@ -868,7 +873,7 @@ footer ul li, .presenter-container-single article ul li {
 }
 @media only screen and (min-width: 1500px) {
   //main styles
-  main, header, .footer-contain, .contain, main .contain, .post-title {
+  main, header, .footer-contain, .contain, main .contain, .post-title, nav #menu {
     width: 1000px;
   }
   .interior .contain {
@@ -876,7 +881,7 @@ footer ul li, .presenter-container-single article ul li {
   }
   //header styles
   #menu-icon {
-    right: calc((100vw - 1000px) / 2);
+    // right: calc((100vw - 1000px) / 2);
   }
 }
 @media print,
