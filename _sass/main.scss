@@ -361,7 +361,7 @@ h2 span.date {
   margin-bottom: 10px;
 }
 h3 {
-  font: 700 2rem/1 $display-font;
+  font: 700 2rem/1.4 $display-font;
   text-transform: uppercase;
   letter-spacing: .5px;
   margin: 50px 0 15px 0
@@ -811,7 +811,7 @@ footer ul li, .presenter-container-single article ul li {
   }
   // type styles
   h1.home {
-    font: 900 10rem/1 $display-font;
+    font: 900 10rem/.9 $display-font;
     margin-top: -12px;
   }
   .interior h1 {
