@@ -583,11 +583,6 @@ footer ul li, .presenter-container-single article ul li {
   100% {transform: rotate(360deg);}
 }
 
-html {
-    visibility: visible;
-    opacity: 1;
-}
-
  /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -969,4 +964,10 @@ html {
     h3 {
         page-break-after: avoid;
     }
+}
+@media only screen and (min-width: 100px) {
+  html {
+      visibility: visible;
+      opacity: 1;
+  }
 }
