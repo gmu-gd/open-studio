@@ -65,7 +65,7 @@ function open() {
   } else if ( dayOfWeek == 1 && time >= newOT.close2 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We are closed for the day but we will be at 11am tomorrow! See you then.');
+    $("#open-text").html('We are closed for the day but we will be open at 11am tomorrow! See you then.');
   } else if ( dayOfWeek == 2 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
@@ -77,7 +77,7 @@ function open() {
   } else if ( dayOfWeek == 2 && time >= newOT.close1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We are closed for the day but we will be at 10am tomorrow! See you then.');
+    $("#open-text").html('We are closed for the day but we will be open at 10am tomorrow! See you then.');
   } else if ( dayOfWeek == 3 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
@@ -97,7 +97,7 @@ function open() {
   } else if ( dayOfWeek == 3 && time >= newOT.close2 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We are closed for the day but we will be at 12pm tomorrow! See you then.');
+    $("#open-text").html('We are closed for the day but we will be open at 12pm tomorrow! See you then.');
   } else if ( dayOfWeek == 4 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
@@ -121,7 +121,7 @@ function open() {
   } else if ( dayOfWeek == 4 && time >= newOT.close3 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We are closed for the day but we will be at 11am on Friday! See you then.');
+    $("#open-text").html('We are closed for the day but we will be open at 11am on Friday! See you then.');
   }  else if ( dayOfWeek == 5 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
