@@ -20,7 +20,7 @@ function loader() {
 	// Animate loader off screen
   setTimeout(function() {
        $("html").removeClass("load-hide");
-   }, 200);
+   }, 0);
   console.log('this works');
 }
 var i = 1;
