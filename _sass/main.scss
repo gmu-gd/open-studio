@@ -121,6 +121,9 @@ $text-font: 'DM Sans', sans-serif;
 
 .primary {color: $primary-color;}
 // main styles
+.load-hide {
+  visibility: hidden;
+}
 html {
   font-family: $text-font;
   font-size: 18px;
@@ -964,10 +967,4 @@ footer ul li, .presenter-container-single article ul li {
     h3 {
         page-break-after: avoid;
     }
-}
-@media only screen and (min-width: 100px) {
-  html {
-      visibility: visible;
-      opacity: 1;
-  }
 }

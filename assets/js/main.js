@@ -2,6 +2,7 @@ $(document).ready(function() {
     // run function on initial page load
     nav();
     open();
+    loader();
     // run function on resize of the window
     $(window).resize(function() {
 
@@ -10,7 +11,18 @@ $(document).ready(function() {
     $(window).scroll(function() {
 
     })
+    // $(window).load(function() {
+    //   loader();
+    // });
 });
+
+function loader() {
+	// Animate loader off screen
+  setTimeout(function() {
+       $("html").removeClass("load-hide");
+   }, 200);
+  console.log('this works');
+}
 var i = 1;
 function nav() {
   $('#menu-icon').click(function(){
