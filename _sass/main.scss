@@ -122,6 +122,7 @@ $text-font: 'DM Sans', sans-serif;
 .primary {color: $primary-color;}
 // main styles
 html {
+  font-display: optional;
   font-family: $text-font;
   font-size: 18px;
   color: $primary-color;
