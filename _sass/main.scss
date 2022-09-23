@@ -122,7 +122,6 @@ $text-font: 'DM Sans', sans-serif;
 .primary {color: $primary-color;}
 // main styles
 html {
-  font-display: optional;
   font-family: $text-font;
   font-size: 18px;
   color: $primary-color;
@@ -584,6 +583,10 @@ footer ul li, .presenter-container-single article ul li {
   100% {transform: rotate(360deg);}
 }
 
+html {
+    visibility: visible;
+    opacity: 1;
+}
 
  /* ==========================================================================
    Helper classes
