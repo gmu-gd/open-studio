@@ -1,5 +1,5 @@
 # File: .github/workflows/rebuild.yml
-name: 3am Rebuild
+name: hourly Rebuild
 
 on:
   schedule:

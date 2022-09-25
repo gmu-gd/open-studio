@@ -1,15 +1,28 @@
-{% assign curDate = site.time | date: '%s' %}
+{% assign evener = 1 | times: 24 | times: 60 | times: 60 %}
+{% assign curDate = site.time | date: '%m%d' %}
+{% assign adjDate = site.time | date: '%m%d' | minus: evener | date: '%m%d' %}
 {% assign counter = '0' %}
 {% for post in site.posts reversed %}
-  {% assign postStartDate = post.date | date: '%s' %}
+  {% assign postStartDate = post.date | date: '%m%d' %}
   {% if postStartDate >= curDate %}
     {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
   {% endif %}
 {% endfor %}
 {% if counter != '0' %}
   {% for post in site.posts reversed %}
-    {% assign postStartDate = post.date | date: '%s' %}
-    {% if postStartDate >= curDate %}
+    {% assign postStartDate = post.date | date: '%m%d' %}
+    {% if postStartDate == curDate %}
+      <div class="line-through">
+        <h4><span>Happening Today!</span></h4>
+      </div>
+      <article>
+        <!-- <h2><a href="{{ post.url }}">#{{ post.number }} &ndash; {{ post.title }}</a>&nbsp;<span class="date">{{ post.date | date: "%m.%d.%Y"}}</h2> -->
+        <h2>{{ post.title }} <span class="date">{{ post.date | date: "%m.%d.%Y"}}</h2>
+        <p>{{ post.description }}</p>
+        <a href="{{ post.url | relative_url }}"><button class="fom-button">Find Out More</button></a>
+      </article>
+    {% endif %}
+    {% if postStartDate > curDate %}
       <div class="line-through">
         <h4><span>Upcoming Events</span></h4>
       </div>
