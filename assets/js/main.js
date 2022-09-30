@@ -42,6 +42,7 @@ function nav() {
   });
 }
 function open() {
+  console.log('reading?');
   var data = [
     { }, //Sunday - closed
     { open1: 1200, close1: 1400, open2: 1400, close2: 1600 }, //Monday
@@ -142,7 +143,7 @@ function open() {
     $('h1.home').addClass('open');
     $("#open_c").html('Is open!');
     $("#open-text").html('Stop on in! <a href="people/">Juana Medina Rosas</a> will be in the studio until we close at 1pm.');
-  }  else if ( dayOfWeek == 5 && time >= newOT.close2 ) {
+  }  else if ( dayOfWeek == 5 && time >= newOT.close1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
     $("#open-text").html('We are closed until Monday at noon.');
