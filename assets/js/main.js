@@ -54,12 +54,17 @@ function open() {
   ];
   var date = new Date();
   var dayOfWeek = date.getDay(); // 0 is Sunday, 1 is Monday, etc...
+  var closed = true;
   var hour = date.getHours();
   var minutes = date.getMinutes();
   minutes = ('0' + minutes).slice(-2); // add zero to single digit number
   var time = hour + "" + minutes; // set time as HHMM with no colon
   var newOT = data[dayOfWeek];
-  if (dayOfWeek == 0 || dayOfWeek == 6 ) {
+  if (closed == true) {
+    $('h1.home').addClass('closed');
+    $("#o_close").html('Is closed for the break.');
+    $("#open-text").html('We will open again Monday at noon, see you then!');
+  } else if (dayOfWeek == 0 || dayOfWeek == 6 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
     $("#open-text").html('We will open again Monday at noon, see you then! ');
