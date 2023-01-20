@@ -111,11 +111,11 @@ function open() {
   } else if ( dayOfWeek == 3 && time >= newOT.close1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We are closed for the day but we will be open at 12pm tomorrow! See you then.');
+    $("#open-text").html('We are closed for the day but we will be open at noon tomorrow! See you then.');
   } else if ( dayOfWeek == 4 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We aren&#39;t open yet but we will be at 12pm! See you then.');
+    $("#open-text").html('We aren&#39;t open yet but we will be at noon! See you then.');
   } else if ( dayOfWeek == 4 && time >= newOT.open1 && time < newOT.close1 ) {
     $('h1.home').addClass('open');
     $("#open_c").html('Is open!');
@@ -123,19 +123,11 @@ function open() {
   } else if ( dayOfWeek == 4 && time >= newOT.open2 && time < newOT.close2 ) {
     $('h1.home').addClass('open');
     $("#open_c").html('Is open!');
-    $("#open-text").html('Stop on in! <a href="people/">Rick Heffner</a> will be in the studio until we close at 4pm.');
-  } else if ( dayOfWeek == 4 && time >= newOT.close2 && time < newOT.open3 ) {
+    $("#open-text").html('Stop on in! <a href="people/">Michael McDermott</a> will be in the studio until we close at 4pm.');
+  } else if ( dayOfWeek == 4 && time >= newOT.close2 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed!');
-    $("#open-text").html('We are closed but we will be open again at 7:30pm');
-  } else if ( dayOfWeek == 4 && time >= newOT.open3 && time < newOT.close3 ) {
-    $('h1.home').addClass('open');
-    $("#open_c").html('Is open!');
-    $("#open-text").html('Stop on in! <a href="people/">Dr. Miriam Ahmed</a> will be in the studio until we close at 9:30pm.');
-  } else if ( dayOfWeek == 4 && time >= newOT.close3 ) {
-    $('h1.home').addClass('closed');
-    $("#o_close").html('Is closed.');
-    $("#open-text").html('We are closed for the day but we will be open at 11am on Friday! See you then.');
+    $("#open-text").html('We are closed for the day but we will be open at 11am tomorrow! See you then.');
   }  else if ( dayOfWeek == 5 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
@@ -143,10 +135,10 @@ function open() {
   } else if ( dayOfWeek == 5 && time >= newOT.open1 && time < newOT.close1 ) {
     $('h1.home').addClass('open');
     $("#open_c").html('Is open!');
-    $("#open-text").html('Stop on in! <a href="people/">Juana Medina Rosas</a> will be in the studio until we close at 1pm.');
+    $("#open-text").html('Stop on in! <a href="people/">Shanshan Cui</a> will be in the studio until we close at 1pm.');
   }  else if ( dayOfWeek == 5 && time >= newOT.close1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We are closed until Monday at noon.');
+    $("#open-text").html('We are closed until Monday at 11am.');
   }
 }
