@@ -54,7 +54,7 @@ function open() {
   ];
   var date = new Date();
   var dayOfWeek = date.getDay(); // 0 is Sunday, 1 is Monday, etc...
-  var closed = false;
+  var closed = true;
   var hour = date.getHours();
   var minutes = date.getMinutes();
   minutes = ('0' + minutes).slice(-2); // add zero to single digit number
@@ -62,8 +62,8 @@ function open() {
   var newOT = data[dayOfWeek];
   if (closed == true) {
     $('h1.home').addClass('closed');
-    $("#o_close").html('Is closed for winter break.');
-    $("#open-text").html('We will be back starting next week. See you then!');
+    $("#o_close").html('Is closed for the summer.');
+    $("#open-text").html('We will be back starting in the fall. See you then!');
   } else if (dayOfWeek == 0 || dayOfWeek == 6 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
