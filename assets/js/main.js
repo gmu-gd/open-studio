@@ -115,7 +115,7 @@ function open() {
   } else if ( dayOfWeek == 4 && time >= newOT.open1 && time < newOT.close1 ) {
     $('h1.home').addClass('open');
     $("#open_c").html('Is open!');
-    $("#open-text").html('Stop on in! We are open until 4pm today and <a href="people/">Ana Tobin</a> will be in the studio until 4pm.');
+    $("#open-text").html('Stop on in! <a href="people/">Ana Tobin</a> will be in the studio until we cloase at 4pm.');
   } else if ( dayOfWeek == 4 && time >= newOT.close1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed!');
