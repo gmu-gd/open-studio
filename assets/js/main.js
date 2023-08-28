@@ -45,7 +45,7 @@ function open() {
   console.log('reading?');
   var data = [
     { }, //Sunday - closed
-    { open1: 11300, close1: 1340 }, //Monday
+    { open1: 1130, close1: 1330 }, //Monday
     { open1: 1100, close1: 1300 }, //Tuesday
     { open1: 1200, close1: 1400, open2: 1400, close2: 1600 }, //Wednesday
     { open1: 1400, close1: 1600 }, //Thursday
