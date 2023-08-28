@@ -49,7 +49,7 @@ function open() {
     { open1: 1100, close1: 1300 }, //Tuesday
     { open1: 1200, close1: 1400, open2: 1400, close2: 1600 }, //Wednesday
     { open1: 1400, close1: 1600 }, //Thursday
-    { }, //Friday
+    { }, //Friday - closed
     {} //Saturday - closed
   ];
   var date = new Date();
@@ -75,8 +75,8 @@ function open() {
   } else if ( dayOfWeek == 1 && time >= newOT.open1 && time < newOT.close1 ) {
     $('h1.home').addClass('open');
     $("#open_c").html('Is open!');
-    $("#open-text").html('Stop on in! <a href="people/">Dr. Miriam Ahmed/a> will be in the studio until we close at 1pm.');
-  } else if ( dayOfWeek == 1 && time >= newOT.close1 && time < newOT.open2 ) {
+    $("#open-text").html('Stop on in! <a href="people/">Dr. Miriam Ahmed/a> will be in the studio until we close at 1:30pm.');
+  } else if ( dayOfWeek == 1 && time >= newOT.close1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed!');
     $("#open-text").html('We are closed for the day but we will be open at 11am tomorrow! See you then.');
