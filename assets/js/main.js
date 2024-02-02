@@ -46,7 +46,7 @@ function open() {
   var data = [
     { }, //Sunday - closed
     { open1: 1400, close1: 1600 }, //Monday
-    // { open1: 1100, close1: 1300, open2: 1400, close2: 1600 }, Tuesday
+    { }, // { open1: 1100, close1: 1300, open2: 1400, close2: 1600 }, Tuesday
     { open1: 1400, close1: 1600 }, //Wednesday
     { open1: 1500, close1: 1600 }, //Thursday
     { }, //Friday - closed
@@ -60,6 +60,7 @@ function open() {
   minutes = ('0' + minutes).slice(-2); // add zero to single digit number
   var time = hour + "" + minutes; // set time as HHMM with no colon
   var newOT = data[dayOfWeek];
+  console.log( 'day of week = ' + dayOfWeek + ' time = ' + time + ' last logged time = ' + newOT);
   if (closed == true) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed for the winter break.');
@@ -107,6 +108,6 @@ function open() {
   } else if ( dayOfWeek == 4 && time >= newOT.close1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed!');
-    $("#open-text").html('We are closed until Monday at 2pm.');
+    $("#open-text").html('We will open again Monday at 2pm, see you then!');
   }
 }
