@@ -46,7 +46,7 @@ function open() {
   var data = [
     { }, //Sunday - closed
     { open1: 1400, close1: 1600 }, //Monday
-    { open1: 1400, close1: 1600, //Tuesday open2: 1400, close2: 1600 }
+    { open1: 1400, close1: 1600 }, //Tuesday , open2: 1400, close2: 1600
     { open1: 1400, close1: 1600 }, //Wednesday
     { open1: 1500, close1: 1600 }, //Thursday
     { }, //Friday - closed
