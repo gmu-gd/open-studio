@@ -46,7 +46,7 @@ function open() {
   var data = [
     { }, //Sunday - closed
     { open1: 1400, close1: 1600 }, //Monday
-    { }, // { open1: 1100, close1: 1300, open2: 1400, close2: 1600 }, Tuesday
+    { open1: 1400, close1: 1600, //Tuesday open2: 1400, close2: 1600 }
     { open1: 1400, close1: 1600 }, //Wednesday
     { open1: 1500, close1: 1600 }, //Thursday
     { }, //Friday - closed
@@ -81,10 +81,18 @@ function open() {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed!');
     $("#open-text").html('We are closed for the day but we will be open at 2pm on Wednesday! See you then.');
-  } else if ( dayOfWeek == 2 ) {
+  } else if ( dayOfWeek == 2 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
-    $("#open-text").html('We closed today but will be open tomorrow at 2pm! See you then.');
+    $("#open-text").html('We aren&#39;t open yet but we will be at 2pm! See you then.');
+  } else if ( dayOfWeek == 2 && time >= newOT.open1 && time < newOT.close1 ) {
+    $('h1.home').addClass('open');
+    $("#open_c").html('Is open!');
+    $("#open-text").html('Stop on in! <a href="people/">Jax Ohashi</a> will be in the studio until we close at 4pm.');
+  } else if ( dayOfWeek == 2 && time >= newOT.close1 ) {
+    $('h1.home').addClass('closed');
+    $("#o_close").html('Is closed!');
+    $("#open-text").html('We are closed for the day but we will be open at 2pm tomorrow! See you then.');
   } else if ( dayOfWeek == 3 && time < newOT.open1 ) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed.');
