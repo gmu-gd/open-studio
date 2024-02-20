@@ -21,7 +21,6 @@ function loader() {
   setTimeout(function() {
        $("html").removeClass("load-hide");
    }, 0);
-  console.log('this works');
 }
 var i = 1;
 function nav() {
@@ -42,7 +41,6 @@ function nav() {
   });
 }
 function open() {
-  console.log('reading?');
   var data = [
     { }, //Sunday - closed
     { open1: 1400, close1: 1600 }, //Monday
@@ -60,7 +58,7 @@ function open() {
   minutes = ('0' + minutes).slice(-2); // add zero to single digit number
   var time = hour + "" + minutes; // set time as HHMM with no colon
   var newOT = data[dayOfWeek];
-  console.log( 'day of week = ' + dayOfWeek + ' time = ' + time + ' last logged time = ' + newOT);
+  // console.log( 'day of week = ' + dayOfWeek + ' time = ' + time + ' last logged time = ' + newOT);
   if (closed == true) {
     $('h1.home').addClass('closed');
     $("#o_close").html('Is closed for the winter break.');
